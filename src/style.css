@@ -1,0 +1,250 @@
+.edit-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+.edit-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: all .1s;
+}
+.edit-exit {
+	opacity: 1;
+}
+.edit-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: all .1s;
+}
+
+
+.shop-enter {
+	right: -440px;
+	transition: .1s;
+}
+.shop-enter-active {
+	transition: .1s;
+	right: 0px;
+}
+.shop-enter-done {
+	transition: .1s;
+	right: 0px;
+}
+.shop-exit {
+	transition: .2s;
+	right: -440px;
+}
+.shop-exit-active {
+	transition: all .2s;
+	right: -440px;
+	opacity: 0;
+}
+
+
+
+.message_basket-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+.message_basket-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: all .1s;
+}
+
+.message_basket-exit {
+	opacity: 1;
+}
+.message_basket-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: all .1s;
+}
+
+
+.edit_description-enter {
+	transition: .2s;
+	opacity: 0;
+}
+.edit_description-enter-active {
+	transition: .2s;
+	opacity: 1;
+	top: 25px;
+}
+.edit_description-enter-done {
+	transition: .1s;
+	opacity: 1;
+	top: 25px;
+}
+.edit_description-exit {
+	transition: .1s;
+	opacity: 1;
+	top: 50px;
+}
+.edit_description-exit-active {
+	transition: .1s;
+	opacity: 0;
+	top: 35px;
+	right: 0px;
+}
+
+.filter-enter {
+	right: -1440px;
+	transition: all .2s;
+}
+.filter-enter-active {
+	transition: all .2s;
+	right: 0px;
+}
+.filter-enter-done {
+	transition: all .2s;
+	right: 0px;
+}
+.filter-exit {
+	transition: all .3s;
+}
+.filter-exit-active {
+	transition: all .2s;
+	right: -440px;
+	opacity: 0;
+}
+
+.swiper{
+	height: 100%;
+}
+.promotion-swiper-slide{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 300px;
+	width: 300px;
+	height: 344px;
+	position: relative;
+}
+@media(max-width:1024px){
+	.promotion-swiper-slide{
+		max-width: 280px;
+		max-height: 320px;
+	}
+}
+.swiper-wrapper{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.mobile_filter-enter {
+	bottom: 0px;
+	transition: .2s;
+	max-height: 85%;
+}
+.mobile_filter-enter-active {
+	max-height: 88%;
+	bottom: 0px;
+}
+.mobile_filter-enter-done {
+	max-height: 85%;
+	transition: .2s;
+	bottom: 0px;
+}
+.mobile_filter-exit {
+	bottom: -1110px;
+	transition: .2s;
+	max-height: 85%;
+}
+.mobile_filter-exit-active {
+	transition: 1s;
+	bottom: -1110px;
+	max-height: 88%;
+}
+.mobile_filter-exit-active .mobile_popap__moobile_filter_footer__WzxeJ{
+	position : relative;
+}
+
+.edit-mobile-enter {
+    bottom: 0px;
+	transition: .2s;
+    max-height: 85%;
+}
+.edit-mobile-enter-active {
+	bottom: 0px;
+    max-height: 88%;
+}
+.edit-mobile-enter-done {
+	transition: .2s;
+	bottom: 0px;
+    max-height: 85%;
+	overflow-y: scroll;
+}
+.edit-mobile-exit {
+    bottom: -1110px;
+	transition: .2s;
+    max-height: 85%;
+}
+.edit-mobile-exit-active {
+	transition: .2s;
+    bottom: -1110px;
+    max-height: 88%;
+}
+
+.shop_mobile-enter {
+    bottom: -1110px;
+	transition: .2s;
+    max-height: 85%;
+}
+.shop_mobile-enter-active {
+	bottom: 0px;
+    max-height: 88%;
+}
+.shop_mobile-enter-active {
+	bottom: 0px;
+    max-height: 88%;
+}
+.shop_mobile-enter-done {
+	transition: .2s;
+	bottom: 0px;
+    max-height: 85%;
+}
+.shop_mobile-exit {
+    bottom: -1110px;
+	transition: .2s;
+    max-height: 85%;
+}
+.shop_mobile-exit-active {
+	transition: .2s;
+    bottom: -1110px;
+    max-height: 88%;
+}
+.shop_mobile-exit-active .mobile_popap__shopping_footer__-SMli{
+	position:relative;
+}
+
+.popap__mobile_pizza_description-enter {
+	transition: .1s;
+	transform: scale(0.9);
+	opacity: 0;
+}
+.popap__mobile_pizza_description-enter-active {
+	transform: translateX(0);
+	transition: .1s;
+	opacity: 1;
+	top: 50px;
+}
+.popap__mobile_pizza_description-enter-done {
+	transform: translateX(0);
+	transition: .1s;
+	opacity: 1;
+	top: 50px;
+}
+.popap__mobile_pizza_description-exit {
+	transition: .2s;
+	transform: scale(0.9);
+	opacity: 1;
+	top: 60px;
+}
+.popap__mobile_pizza_description-exit-active {
+	transition: .2s;
+	transform: scale(0.9);
+	opacity: 0;
+	top: 60px;
+}
+
