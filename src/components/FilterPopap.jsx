@@ -4,7 +4,7 @@ import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
 import s from '../styles/index.module.css';
 // import '../styles/index.module.css';
 import { useSelector, useDispatch } from 'react-redux'
-import {toggleElement, setPizzaFilters, setpizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn} from '../store/AppSlice';
+import {toggleElement, setPizzaFilters, setPizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn, sortPizzaFiltersBtn} from '../store/AppSlice';
 
 import cross from '../img/ico/Cross.svg';
 
@@ -16,13 +16,17 @@ export default function FilterPopap({popapFilterRef}) {
 
 	const pizzaLocalFilters = useRef(pizzaFilters);
 
+	const closeFilter = () => {
+		dispatch(toggleElement('handlePopapFilter'));
+		dispatch(sortPizzaFiltersBtn());
+	}
 	const setFilter =(e)=>{
 		if(!pizzaLocalFilters.current.includes(e.target.textContent)){
 			pizzaLocalFilters.current = [...pizzaLocalFilters.current, e.target.textContent];
 		}else{
 			pizzaLocalFilters.current = pizzaLocalFilters.current.filter((item, index, array) => item != e.target.textContent);
 		}
-		dispatch(setpizzaFiltersActiveBtn(e.target.textContent));
+		dispatch(setPizzaFiltersActiveBtn(e.target.textContent));
 		console.log(pizzaLocalFilters.current);
 	}
 	return (
@@ -31,7 +35,7 @@ export default function FilterPopap({popapFilterRef}) {
 				<div ref={popapFilterRef} className={s.container_filter}>
 					<div className={s.popap__filter_top}>
 						<h1 className={s.popap__filter_title}>Фильтры</h1>
-						<button onClick={()=>{dispatch(toggleElement('handlePopapFilter'))}} className={s.popap__filter_close}>
+						<button onClick={()=>closeFilter()} className={s.popap__filter_close}>
 							<img src={cross} alt="cross" />
 						</button>
 					</div>
@@ -75,9 +79,6 @@ export default function FilterPopap({popapFilterRef}) {
 								<button onClick={(e)=>setFilter(e)} className={pizzaFiltersActiveBtn['Чеддер'] ? s.popap__filter_active : s.popap__filter_item }>Чеддер</button>
 							</div>
 						</div>
-
-
-
 					</div>
 
 					<div className={s.popap__filter__line}></div>

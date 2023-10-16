@@ -4,7 +4,7 @@ import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
 import s from '../styles/index.module.css';
 // import '../styles/index.module.css';
 import { useSelector, useDispatch } from 'react-redux'
-import {toggleElement, showMessage, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
+import {toggleElement, setRouteState, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
 
 import cross from '../img/ico/Cross.svg';
 import icoPlus from '../img/ico/Plus.svg';
@@ -15,9 +15,9 @@ export default function ShoppingBagPopap({popapShopRef}) {
 	const listShopping = useSelector((state) => state.app.listShopping);
 	
 	let finalPrice = useSelector((state) => state.app.finalPrice);
-
-	console.log(listShopping);
 	const dispatch = useDispatch();
+	
+
 	return (
 		<>
 			<div className={s.popap__shopping}>
@@ -31,9 +31,9 @@ export default function ShoppingBagPopap({popapShopRef}) {
 					{listShopping.length ? 
 						<ul className={s.popap__shopping_list}>
 							{listShopping.map((item, index)=>(
-								<li className={s.popap__shopping_product}>
+								<li key={item.name} className={s.popap__shopping_product}>
 									<div className={s.popap__shopping_img}>
-										<img src={item.urlImg} alt="" srcset="" />
+										<img src={item.urlImg} alt=""  />
 									</div>
 									<div className={s.popap__shopping_info}>
 										<div className={s.popap__shopping_info_top}>
@@ -48,13 +48,12 @@ export default function ShoppingBagPopap({popapShopRef}) {
 											<div className={s.popap__shopping_counter}>
 												<button onClick={()=>{
 													dispatch(shopCounterMinus(index))
-													dispatch(showMessage())
 												}} className={s.popap__shopping_minus}>
-													<img src={icoMinus} alt="" srcset="" />
+													<img src={icoMinus} alt=""  />
 												</button>
 												<span className={s.popap__shopping_counter_out}>{item.quantity}</span>
 												<button onClick={()=>dispatch(shopCounterPlus(index))} className={s.popap__shopping_plus}>
-													<img src={icoPlus} alt="" srcset="" />
+													<img src={icoPlus} alt=""  />
 												</button>
 											</div>
 											<div className={s.popap__shopping_price}>
@@ -66,13 +65,28 @@ export default function ShoppingBagPopap({popapShopRef}) {
 							))}
 						</ul>
 					:
-
 						<div className={s.popap__shopping_erorr}>Пусто</div>
 					}
 					<div className={s.popap__shopping__line}></div>
 					<div className={s.popap__shopping_footer}>
 						<h3 className={s.popap__shopping_summ}>Итого: {finalPrice} ₽</h3>
-						<button className={s.popap__shopping_checkout}>Оформить заказ</button>
+						{listShopping.length ?
+							<Link 
+							to={'/confirm'} 
+							onClick={()=>{
+								dispatch(toggleElement('handlePopapShopping'));
+								dispatch(setRouteState('confirm'));
+								window.scrollTo(0 , 0)
+								console.log(window)
+							}}
+							className={s.popap__shopping_checkout}
+
+							>
+							Оформить заказ
+							</Link>
+						:
+							<a href='#' className={s.popap__shopping_checkout}>Оформить заказ</a>
+						}
 					</div>
 				</div>
 			</div>

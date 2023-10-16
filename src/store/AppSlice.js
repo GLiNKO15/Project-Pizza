@@ -39,7 +39,12 @@ export const AppSlice = createSlice({
      'Томаты':false, 
      'Лук':false, 
      'Ананасы':false, 
-    } 
+    },
+    responseFood: null,
+    delivery: "Доставка",
+    deliveryTime: 'Скорее', 
+    deliveryDay: null, 
+    routeState:'main',
   },
   reducers: {
     toggleElement:(state, actions)=>{
@@ -57,20 +62,23 @@ export const AppSlice = createSlice({
       }
     },
     pushListShopping:(state, actions) => {
-      state.listShopping.push(
-        {
-          id:state.listShopping.length+1,
-          urlImg:actions.payload.urlImg,
-          name:actions.payload.name,
-          size:actions.payload.size,
-          weidth:actions.payload.weidth,
-          price:actions.payload.price,
-          type:actions.payload.type,
-          quantity:1,
-        });
-    },
-    setMassage:(state)=>{
-
+      
+      let result = state.listShopping.find(item=> item.key == actions.payload.key);
+      
+      if(!result ){
+        state.listShopping.push(
+          {
+            id:state.listShopping.length+1,
+            urlImg:actions.payload.urlImg,
+            name:actions.payload.name,
+            size:actions.payload.size,
+            weidth:actions.payload.weidth,
+            price:actions.payload.price,
+            key:actions.payload.key,
+            type:actions.payload.type,
+            quantity:1,
+          });
+      }
     },
     showMessage:(state)=>{
       state.shoppingMessage = true;
@@ -79,7 +87,10 @@ export const AppSlice = createSlice({
       state.shoppingMessage = false;
     },
     shopCounterPlus:(state, actions)=>{
-      if(state.listShopping[actions.payload].quantity < 9) state.listShopping[actions.payload].quantity = state.listShopping[actions.payload].quantity +1;
+      if(state.listShopping[actions.payload].quantity < 9){
+        
+        state.listShopping[actions.payload].quantity = state.listShopping[actions.payload].quantity + 1;
+      }
     },
     shopCounterMinus:(state, actions)=>{
       if(state.listShopping[actions.payload].quantity > 1){
@@ -97,7 +108,7 @@ export const AppSlice = createSlice({
     setPizzaFilters:(state, actions)=>{
       state.pizzaFilters = actions.payload;
     },
-    setpizzaFiltersActiveBtn:(state, actions)=>{
+    setPizzaFiltersActiveBtn:(state, actions)=>{
       console.log(actions.payload);
       console.log(state.pizzaFiltersActiveBtn[`${actions.payload}`]);
 
@@ -107,17 +118,45 @@ export const AppSlice = createSlice({
       for (const key in state.pizzaFiltersActiveBtn) {
         state.pizzaFiltersActiveBtn[key] = false;
       }
+    },
+    sortPizzaFiltersBtn:(state)=>{
+      for (const key in state.pizzaFiltersActiveBtn) {
+        state.pizzaFiltersActiveBtn[key] = false;
+      }
+      state.pizzaFilters.forEach((value)=>{
+        state.pizzaFiltersActiveBtn[`${value}`] = true;
+      })
+    },
+    setResponseFood:(state, actions)=>{
+      state.responseFood = actions.payload;
+    },
+    setDelivery:(state, actions)=>{
+      state.delivery = actions.payload;
+    },
+    setDeliveryDay:(state, actions)=>{
+      state.deliveryDay = actions.payload;
+    },
+    defaultDeliveryDay:(state)=>{
+      const date = new Date;
+      
+      state.deliveryDay = `${date.getUTCDate()}/${date.getUTCMonth()+1}`;
+    },
+    setRouteState:(state, actions)=>{
+      state.routeState = actions.payload;
+      console.log(state.routeState)
     }
     },
 })
 
-// Action creators are generated for each case reducer function
+
 export const {
-              fullPopapPizzaData, pushListShopping,
-              hideMessage, shopCounterMinus,
-              shopCounterPlus, setFinalPrice, setPricePizzaFinal,
-              setPizzaFilters, showMessage,
-              setpizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn,
-              toggleElement} = AppSlice.actions;
+  fullPopapPizzaData, pushListShopping,
+  hideMessage, shopCounterMinus,
+  shopCounterPlus, setFinalPrice, setPricePizzaFinal,
+  setPizzaFilters, showMessage,
+  setPizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn,
+  toggleElement, sortPizzaFiltersBtn, setResponseFood,
+  setDelivery, setDeliveryDay,
+  defaultDeliveryDay, setRouteState} = AppSlice.actions;
 
 export default AppSlice.reducer

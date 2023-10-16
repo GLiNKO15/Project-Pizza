@@ -1,12 +1,12 @@
 import React, {useRef, useState, useEffect} from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
-// import {  } from './counterSlice'
-import s from '../styles/mobile.module.css';
-// import '../styles/index.module.css';
-import { useSelector, useDispatch } from 'react-redux'
-import {toggleElement, showMessage, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
+import { Link} from 'react-router-dom';
 
-import cross from '../img/ico/Cross.svg';
+import s from '../styles/mobile.module.css';
+
+import { useSelector, useDispatch } from 'react-redux'
+import {toggleElement, setRouteState, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
+
+
 import icoPlus from '../img/ico/Plus.svg';
 import icoMinus from '../img/ico/Minus.svg';
 
@@ -28,9 +28,9 @@ export default function MobileShoppingBagPopap({popapMobileShopRef}) {
 					{listShopping.length ? 
 						<ul className={s.popap__shopping_list}>
 							{listShopping.map((item, index)=>(
-								<li className={s.popap__shopping_product}>
+								<li key={item.name} className={s.popap__shopping_product}>
 									<div className={s.popap__shopping_img}>
-										<img src={item.urlImg} alt="" srcset="" />
+										<img src={item.urlImg} alt="" />
 									</div>
 									<div className={s.popap__shopping_info}>
 										<div className={s.popap__shopping_info_top}>
@@ -45,13 +45,12 @@ export default function MobileShoppingBagPopap({popapMobileShopRef}) {
 											<div className={s.popap__shopping_counter}>
 												<button onClick={()=>{
 													dispatch(shopCounterMinus(index))
-													dispatch(showMessage())
 												}} className={s.popap__shopping_minus}>
-													<img src={icoMinus} alt="" srcset="" />
+													<img src={icoMinus} alt="" />
 												</button>
 												<span className={s.popap__shopping_counter_out}>{item.quantity}</span>
 												<button onClick={()=>dispatch(shopCounterPlus(index))} className={s.popap__shopping_plus}>
-													<img src={icoPlus} alt="" srcset="" />
+													<img src={icoPlus} alt="" />
 												</button>
 											</div>
 											<div className={s.popap__shopping_price}>
@@ -68,7 +67,23 @@ export default function MobileShoppingBagPopap({popapMobileShopRef}) {
 					}
 					<div className={s.popap__shopping_footer}>
 						<h3 className={s.popap__shopping_summ}>Итого: {finalPrice} ₽</h3>
-						<button className={s.popap__shopping_checkout}>Оформить заказ</button>
+
+						{listShopping.length ?
+							<Link 
+							to={'/confirm'} 
+							onClick={()=>{
+								dispatch(toggleElement('handlePopapMobileShopping'));
+								dispatch(setRouteState('confirm'));
+								window.scrollTo(0, 0);
+							}}
+							className={s.popap__shopping_checkout}
+
+							>
+							Оформить заказ
+							</Link>
+						:
+							<a href='#' className={s.popap__shopping_checkout}>Оформить заказ</a>
+						}
 					</div>
 				</div>
 			</div>

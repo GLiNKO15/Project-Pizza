@@ -5,7 +5,7 @@ import s from '../styles/mobile.module.css';
 
 
 import { useSelector, useDispatch } from 'react-redux'
-import {toggleElement, setPizzaFilters, setpizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn} from '../store/AppSlice';
+import {toggleElement, setPizzaFilters, setPizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn, sortPizzaFiltersBtn} from '../store/AppSlice';
 
 
 export default function MobileFiltersPopap({popapMobileFilterRef}) {
@@ -21,12 +21,13 @@ export default function MobileFiltersPopap({popapMobileFilterRef}) {
 		}else{
 			pizzaLocalFilters.current = pizzaLocalFilters.current.filter((item, index, array) => item != e.target.textContent);
 		}
-		dispatch(setpizzaFiltersActiveBtn(e.target.textContent));
+		dispatch(setPizzaFiltersActiveBtn(e.target.textContent));
 		console.log(pizzaLocalFilters.current);
 	}
 	const hidePopap =(e)=>{
 		if(e.target.className == 'mobile_filter__HXZTw'){
-			dispatch(setPizzaFilters(pizzaLocalFilters.current));
+			dispatch(sortPizzaFiltersBtn());
+			
 			dispatch(toggleElement('handlePopapMobileFilter'));;
 		}
 	}

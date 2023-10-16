@@ -8,13 +8,15 @@ import icoFilter from '../img/ico/Filter.svg';
 
 
 import {useSelector, useDispatch } from 'react-redux'
-import {togglePopapPizza, fullPopapPizzaData,
+import {fullPopapPizzaData,
 		showMessage, hideMessage,  pushListShopping,
-		setFinalPrice, togglePopapFilter, togglePopapMobileFilter, togglePopapMobileEditPizza, toggleElement} from '../store/AppSlice';
+		setFinalPrice, toggleElement} from '../store/AppSlice';
 
 export default function Food({food, name}){
 	const dispatch = useDispatch();
 	let listShopping = useSelector((state) => state.app.listShopping);
+	let filters = useSelector((state) => state.app.listShopping);
+
 
 	let mobileVersion = false;
 	if(window.innerWidth < 644){
@@ -22,32 +24,17 @@ export default function Food({food, name}){
 	}
 
 	let finalPrice = 0;
-	for (let i = 0; i < listShopping.length; i++) {
-		if(listShopping[i].quantity == 1){
-			finalPrice = finalPrice + listShopping[i].price; 
-		}else{
-			let n = listShopping[i].quantity;
-			console.log(n);
-			while(n){
-				finalPrice = finalPrice + listShopping[i].price; 
-				n--
-			}
-			
-		}
-		
-	}
 	dispatch(setFinalPrice(finalPrice));
 	
 	const editPizza = (id)=>{
 		let item = food[id];
 		if(name=='Пицца'){
-			console.log(item);
 			
 			dispatch(fullPopapPizzaData({name:item.title, urlImg:item.imgUrl, description:item.ingredients, price:item.price, isHit:item.isHit, isNew:item.isNew}));
 			if(mobileVersion) dispatch(toggleElement('handlePopapMobileEditPizza'));
 			else dispatch(toggleElement('handlePopapPizza'));
 		}else{
-			dispatch(pushListShopping({urlImg:item.imgUrl, name:item.title, size:null, weidth:null, price:item.price, type:null}));
+			dispatch(pushListShopping({urlImg:item.imgUrl, key:item.key , name:item.title, size:null, weidth:null, price:item.price, type:null}));
 			dispatch(showMessage());
 			setTimeout(()=>{
 				dispatch(hideMessage())
@@ -57,7 +44,6 @@ export default function Food({food, name}){
 
 	const pizzaFilters = useSelector((state) => state.app.pizzaFilters);
 
-	console.log(pizzaFilters);
 	let pizzaList = food;
 	if(name == 'Пицца'){
 		pizzaFilters.forEach((value) => {
@@ -65,12 +51,9 @@ export default function Food({food, name}){
 				if(item.filterInfo.includes(value)) return true;
 			})
 		})
-		console.log(pizzaList);
 	}
 	let filter = false;
 	if(name == 'Пицца') filter = true;
-	// food = pizzaList  
-	console.log();
 
 	return (
 		<>
@@ -95,7 +78,7 @@ export default function Food({food, name}){
 					<ul className={s.list__food}> 
 						
 						{pizzaList.map((value, index) => (
-							<li key={value.id} className={s.list__food_item}>
+							<li key={value.key} className={s.list__food_item}>
 								<div onClick={()=>editPizza(value.id-1)} className={s.list__food_imgblock}>
 									<img className={s.item__food_img} alt={value.title} src={value.imgUrl} />
 								</div>

@@ -9,7 +9,8 @@
 			"price":539,
 			"sizes":[26, 30, 40],
 			"isHit":true,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza1"
 		},
 		{
 			"id":2,
@@ -20,7 +21,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":true,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza2"
 		},
 		{
 			"id":3,
@@ -31,7 +33,8 @@
 			"price":539,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":true
+			"isNew":true,
+			"key":"pizza3"
 		},
 		{
 			"id":4,
@@ -42,7 +45,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":true
+			"isNew":true,
+			"key":"pizza4"
 		},
 		{
 			"id":5,
@@ -53,7 +57,8 @@
 			"price":689,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":true
+			"isNew":true,
+			"key":"pizza5"
 		},
 		{
 			"id":6,
@@ -64,7 +69,8 @@
 			"price":495,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza6"
 		},
 		{
 			"id":7,
@@ -75,7 +81,8 @@
 			"price":299,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza7"
 		},
 		{
 			"id":8,
@@ -86,7 +93,8 @@
 			"price":389,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza8"
 		},
 		{
 			"id":9,
@@ -97,7 +105,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza9"
 		},
 		{
 			"id":10,
@@ -108,7 +117,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza10"
 		},
 		{
 			"id":11,
@@ -119,7 +129,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza11"
 		},
 		{
 			"id":12,
@@ -130,7 +141,8 @@
 			"price":439,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza12"
 		},
 		{
 			"id":13,
@@ -141,7 +153,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza13"
 		},
 		{
 			"id":14,
@@ -152,7 +165,8 @@
 			"price":299,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza14"
 		},
 		{
 			"id":15,
@@ -163,7 +177,8 @@
 			"price":299,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza15"
 		},
 		{
 			"id":16,
@@ -174,7 +189,8 @@
 			"price":489,
 			"sizes":[26, 30, 40],
 			"isHit":false,
-			"isNew":false
+			"isNew":false,
+			"key":"pizza16"
 		}
 	],
 	[
@@ -183,56 +199,64 @@
 			"title":"Маки лосось",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3418805_1682259115.0234_original.jpg&w=300&q=75",
 			"ingredients":"Свежий лосось",
-			"price":200
+			"price":200,
+			"key":"sushi1"
 		},
 		{
 			"id":2,
 			"title":"Маки унаги",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3419921_1682259471.5635_original.png&w=300&q=75",
 			"ingredients":"Креветка, майонез",
-			"price":200
+			"price":200,
+			"key":"sushi2"
 		},
 		{
 			"id":3,
 			"title":"Филадельфия классическая",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3419929_1685717692.5427_original.png&w=300&q=75",
 			"ingredients":"Лосось, крем-творог, огурец, тобико",
-			"price":200
+			"price":200,
+			"key":"sushi3"
 		},
 		{
 			"id":4,
 			"title":"Дракон",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3419936_1682253371.7957_original.png&w=300&q=75",
 			"ingredients":"Угорь, крем-сыр, огурец, тобико, соус унаги, кунжут",
-			"price":200
+			"price":200,
+			"key":"sushi4"
 		},
 		{
 			"id":5,
 			"title":"Мурена",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3419964_1685719501.0833_original.png&w=300&q=75",
 			"ingredients":"Лосось копченый, угорь, крем-творог, зеленый лук, тобико",
-			"price":200
+			"price":200,
+			"key":"sushi5"
 		},
 		{
 			"id":6,
 			"title":"Ролл Солнечный",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3420007_1682260244.9402_original.png&w=300&q=75",
 			"ingredients":"Лосось жареный, мармар, огурец, массаго",
-			"price":200
+			"price":200,
+			"key":"sushi6"
 		},
 		{
 			"id":7,
 			"title":"Ико с лососем",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3420039_1682191683.8706_original.png&w=300&q=75",
 			"ingredients":"Лосось, крем-сыр, огурец, красная икра",
-			"price":200
+			"price":200,
+			"key":"sushi7"
 		},
 		{
 			"id":8,
 			"title":"Ролл Ясай с Сыром",
 			"imgUrl":"https://golden-cup.ps.me/_next/image?url=https%3A%2F%2Fimg.postershop.me%2F9153%2FProducts%2F3420186_1682257796.8135_original.png&w=300&q=75",
 			"ingredients":"Помидор, огурец, сладкий перец, крем-творог",
-			"price":200
+			"price":200,
+			"key":"sushi8"
 		}
 	],
 	[
@@ -241,56 +265,64 @@
 			"title":"Супермясной Додстер",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/b33f34589fa74a3788f3981848084cf2_366x366.webp",
 			"ingredients":"Горячая закуска с цыпленком, моцареллой, митболами, острыми колбасками чоризо и соусом бургер",
-			"price":209
+			"price":209,
+			"key":"doster1"
 		},
 		{
 			"id":2,
 			"title":"Додстер",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/be03844e8b8a401ba4af5a4e7f74ea37_366x366.webp",
 			"ingredients":"Легендарная горячая закуска с цыпленком, томатами, моцареллой, соусом ранч",
-			"price":169
+			"price":169,
+			"key":"doster2"
 		},
 		{
 			"id":3,
 			"title":"Острый Додстер",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/1d0bf2b8dd2d472294538d1e80381f77_366x366.webp",
 			"ingredients":"Горячая закуска с цыпленком, перчиком халапеньо, маринованными огурчиками, томатами, моцареллой и соусом барбекю",
-			"price":169
+			"price":169,
+			"key":"doster3"
 		},
 		{
 			"id":4,
 			"title":"Додстер Карри",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/c65d065f6e654aa2a20787a9e806e04d_366x366.webp",
 			"ingredients":"Горячая закуска с цыпленком, ананасом, сладким перцем, моцареллой и пряным соусом карри",
-			"price":189
+			"price":189,
+			"key":"doster4"
 		},
 		{
 			"id":5,
 			"title":"Паста Карбонара",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/adb84e09f2294def97676aef00d0ec1d_366x366.webp",
 			"ingredients":"Паста с беконом, сырами чеддер и пармезан, томатами, моцареллой, фирменным соусом альфредо и чесноком",
-			"price":329
+			"price":329,
+			"key":"doster5"
 		},
 		{
 			"id":6,
 			"title":"Паста Мясная",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/03ac3a2a3f3f45758a03155fbc9dd3eb_366x366.webp",
 			"ingredients":"Паста с митболами, соусом бургер, моцареллой, фирменным томатным соусом и чесноком",
-			"price":329
+			"price":329,
+			"key":"doster6"
 		},
 		{
 			"id":7,
 			"title":"Паста Песто",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/f65f5a81caab4ea680b134084568d293_366x366.webp",
 			"ingredients":"Паста с соусом песто, цыпленком, томатами, моцареллой и фирменным томатным соусом",
-			"price":329
+			"price":329,
+			"key":"doster7"
 		},
 		{
 			"id":8,
 			"title":"Картофель из печи",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/25f84c8850cf44a39387b9c996d6bea5_366x366.webp",
 			"ingredients":"Запеченная в печи картошечка — привычный вкус и мало масла. В составе пряные специи",
-			"price":219
+			"price":219,
+			"key":"doster8"
 		}
 	],
 	[
@@ -299,56 +331,64 @@
 			"title":"Вода негазированная",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/da061eeedf8d46cbbf6284554194d026_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water1"
 		},
 		{
 			"id":2,
 			"title":"Морс Клюква",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/c9b7cc910d9c423f9ce073ba04a92205_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water2"
 		},
 		{
 			"id":3,
 			"title":"Морс Черная смородина",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/1ac5bedb4e454efc8da2dadeef026d52_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water3"
 		},
 		{
 			"id":4,
 			"title":"Морс Вишня",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/96016f51ba8245dabd6f808b7435d646_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water4"
 		},
 		{
 			"id":5,
 			"title":"Кофе Американо",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/b3e4267e06334a428dcc9f1f10a72f34_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water5"
 		},
 		{
 			"id":6,
 			"title":"Кофе Капучино",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/d45790074f574ccfa9c75884dfe55f09_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water6"
 		},
 		{
 			"id":7,
 			"title":"Кофе Латте",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/0ae91c5c67354e33a13ba07f82e9c167_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water7"
 		},
 		{
 			"id":8,
 			"title":"Кофе Карамельный капучино",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/5077dd1995e544539c79e5f639b244bb_366x366.webp",
 			"ingredients":"",
-			"price":209
+			"price":209,
+			"key":"water8"
 		}
 	],
 	[
@@ -357,56 +397,64 @@
 			"title":"3 пиццы от 799 ₽",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/6896b1e6b27f42aba9012121ec13948e_1875x1875.webp",
 			"ingredients":"Настоящая дегустация. Три маленькие пиццы по суперцене. Цена комбо зависит от выбранных пицц и может быть увеличена",
-			"price":799
+			"price":799,
+			"key":"combo1"
 		},
 		{
 			"id":2,
 			"title":"2 пиццы",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/519b674d1d4243439ee192703b348497_366x366.webp",
 			"ingredients":"Парочка что надо. 2 средние пиццы. Цена комбо зависит от выбранных пицц и может быть увеличена",
-			"price":989
+			"price":989,
+			"key":"combo2"
 		},
 		{
 			"id":3,
 			"title":"3 пиццы",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/a529a1677db44979b432324671b48a8b_366x366.webp",
 			"ingredients":"Три удовольствия в нашем меню — это 3 средние пиццы на ваш выбор. Цена комбо зависит от выбранных пицц и может быть",
-			"price":1099
+			"price":1099,
+			"key":"combo3"
 		},
 		{
 			"id":4,
 			"title":"5 пицц",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/365d80eb055b49eeb0459b598d1af956_366x366.webp",
 			"ingredients":"5 причин сделать вечеринку вкуснее. 5 средних пицц для компании из 10–15 человек. Цена комбо зависит от выбранных пицц и может быть увеличена",
-			"price":2419
+			"price":2419,
+			"key":"combo4"
 		},
 		{
 			"id":5,
 			"title":"7 пицц",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/663573d68a3a484f92955346eb6d862d_366x366.webp",
 			"ingredients":"7 — счастливое число, особенно если речь о 7 средних пиццах на компанию 15-20 человек. Цена комбо зависит от выбранных пицц и может быть увеличена",
-			"price":3359
+			"price":3359,
+			"key":"combo5"
 		},
 		{
 			"id":6,
 			"title":"10 пицц",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/22e5d9108dfc45039916b5170e61f48d_366x366.webp",
 			"ingredients":"Великолепная десятка. 10 средних пицц на любой вкус. Для компании из 20-30 человек. Цена комбо зависит от выбранных пицц и может быть увеличена",
-			"price":4899
+			"price":4899,
+			"key":"combo6"
 		},
 		{
 			"id":7,
 			"title":"2 Додстера",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/0d01583237d54aaa8eaf3a7f3666723b_366x366.webp",
 			"ingredients":"Кручу-верчу, два горячих Додстера хочу! Особенно, если один Классический, а другой — Острый с халапеньо, солеными огурчиками и соусом барбекю в тонкой пшеничной лепешке",
-			"price":319
+			"price":319,
+			"key":"combo7"
 		},
 		{
 			"id":8,
 			"title":"2 пиццы и напиток",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/fc5f12da66c24c31a78373657413b3a3_366x366.webp",
 			"ingredients":"Для уютных посиделок. 2 маленькие пиццы и напиток на выбор. Для компании из 2-4 человек. Цена комбо зависит от выбранных продуктов и может быть увеличена",
-			"price":839
+			"price":839,
+			"key":"combo8"
 		}
 	],
 	[
@@ -415,56 +463,64 @@
 			"title":"Слоеные палочки с ананасами и брусникой",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/b61244b188fa4bcaa5c751f970954ffb_366x366.webp",
 			"ingredients":"Здесь все сразу — брусника и ананас со сгущенкой на слоеном тесте",
-			"price":229
+			"price":229,
+			"key":"dessert1"
 		},
 		{
 			"id":2,
 			"title":"Чизкейк Нью-Йорк",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/5a06bd533bb846f59cfb4b8c4e062f86_366x366.webp",
 			"ingredients":"Мы перепробовали тысячу десертов и наконец нашли любимца гостей — нежнейший творожный чизкейк",
-			"price":149
+			"price":149,
+			"key":"dessert2"
 		},
 		{
 			"id":3,
 			"title":"Чизкейк Банановый с шоколадным печеньем",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/2556eeed7a3b4822ba62a6f30e111465_366x366.webp",
 			"ingredients":"Солнечный снаружи и яркий по вкусу внутри. Летняя новинка — нежный чизкейк с бананом и шоколадным печеньем",
-			"price":149
+			"price":149,
+			"key":"dessert3"
 		},
 		{
 			"id":4,
 			"title":"Фондан",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/cb92b92972a14794a8b939e445e07070_366x366.webp",
 			"ingredients":"Четверо из пяти гостей говорят «Oh la la!», когда едят этот французский десерт с хрустящей корочкой и топленой шоколадной начинкой",
-			"price":289
+			"price":289,
+			"key":"dessert4"
 		},
 		{
 			"id":5,
 			"title":"Маффин Соленая карамель",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/c3687909a9cf4064aabc5b07a166e848_366x366.webp",
 			"ingredients":"Раз откусить — навсегда полюбить! Оцените яркое сочетание соленой карамели и арахиса",
-			"price":99
+			"price":99,
+			"key":"dessert5"
 		},
 		{
 			"id":6,
 			"title":"Маффин Три шоколада",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/4922d35d13ef4acba55944a5d5cdae70_366x366.webp",
 			"ingredients":"Ну и кекс этот маффин! Он из натурального какао, а внутри — нежная начинка из кубиков белого и молочного шоколада",
-			"price":99
+			"price":99,
+			"key":"dessert6"
 		},
 		{
 			"id":7,
 			"title":"Бруслетики",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/628471b5fa7848c29a1942d22310002a_366x366.webp",
 			"ingredients":"Это задорные сладкие рулетики, в которых закрутился микс из натуральной брусники и сгущенного молока",
-			"price":230
+			"price":230,
+			"key":"dessert7"
 		},
 		{
 			"id":8,
 			"title":"Рулетики с корицей",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/c0a35a9f4e904db4ae79571f188e132d_366x366.webp",
 			"ingredients":"Десерт, одобренный нашими бабушками. Горячие сладкие рулетики с пряной корицей и сахаром",
-			"price":205
+			"price":205,
+			"key":"dessert8"
 		}
 	],
 	[
@@ -472,19 +528,22 @@
 			"id":1,
 			"title":"Барбекю",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/12cbd86b8f3a4a6593602940d2e65bd9_292x292.webp",
-			"price":35
+			"price":35,
+			"key":"sauce1"
 		},
 		{
 			"id":2,
 			"title":"Сырный соус",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/d5e1787652a445b8ab4a57e912e79a3d_292x292.webp",
-			"price":35
+			"price":35,
+			"key":"sauce2"
 		},
 		{
 			"id":3,
 			"title":"Чесночный соус",
 			"imgUrl":"https://dodopizza-a.akamaihd.net/static/Img/Products/0647e48e57544226a7eacfa1d5b401dd_292x292.webp",
-			"price":35
+			"price":35,
+			"key":"sauce3"
 		}
 	]
 ]
