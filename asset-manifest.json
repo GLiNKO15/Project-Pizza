@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Project-Pizza/static/css/main.fa05c3c7.css",
-    "main.js": "/Project-Pizza/static/js/main.60c071e2.js",
+    "main.css": "/Project-Pizza/static/css/main.5c0d7632.css",
+    "main.js": "/Project-Pizza/static/js/main.ad04d1bb.js",
     "static/media/SFProText-Semibold.woff": "/Project-Pizza/static/media/SFProText-Semibold.211bb31f62d4e685f728.woff",
     "static/media/SFProText-Regular.woff": "/Project-Pizza/static/media/SFProText-Regular.c488b3ed7c98b9c50749.woff",
     "static/media/SFProText-Semibold.woff2": "/Project-Pizza/static/media/SFProText-Semibold.78aaa0376995095f4ae2.woff2",
@@ -38,11 +38,11 @@
     "static/media/ArrowRight.svg": "/Project-Pizza/static/media/ArrowRight.475734f6424058721bc26db2cc5c666a.svg",
     "static/media/ArrowLeftOrange.svg": "/Project-Pizza/static/media/ArrowLeftOrange.583c0b606fe79c91f77fd1f9e173b7d3.svg",
     "static/media/Minus.svg": "/Project-Pizza/static/media/Minus.5063400564260acb35871e9b19c738d6.svg",
-    "main.fa05c3c7.css.map": "/Project-Pizza/static/css/main.fa05c3c7.css.map",
-    "main.60c071e2.js.map": "/Project-Pizza/static/js/main.60c071e2.js.map"
+    "main.5c0d7632.css.map": "/Project-Pizza/static/css/main.5c0d7632.css.map",
+    "main.ad04d1bb.js.map": "/Project-Pizza/static/js/main.ad04d1bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa05c3c7.css",
-    "static/js/main.60c071e2.js"
+    "static/css/main.5c0d7632.css",
+    "static/js/main.ad04d1bb.js"
   ]
 }
