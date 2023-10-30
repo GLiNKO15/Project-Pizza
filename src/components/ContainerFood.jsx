@@ -1,7 +1,6 @@
 
 
 import React, {useRef, useState, useEffect} from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
 
 import s from '../styles/index.module.css';
 import icoFilter from '../img/ico/Filter.svg';
@@ -28,18 +27,17 @@ export default function Food({food, name}){
 	
 	const editPizza = (id)=>{
 		let item = food[id];
-		if(name=='Пицца'){
-			
-			dispatch(fullPopapPizzaData({name:item.title, urlImg:item.imgUrl, description:item.ingredients, price:item.price, isHit:item.isHit, isNew:item.isNew}));
-			if(mobileVersion) dispatch(toggleElement('handlePopapMobileEditPizza'));
-			else dispatch(toggleElement('handlePopapPizza'));
-		}else{
-			dispatch(pushListShopping({urlImg:item.imgUrl, key:item.key , name:item.title, size:null, weidth:null, price:item.price, type:null}));
-			dispatch(showMessage());
-			setTimeout(()=>{
-				dispatch(hideMessage())
-			}, 1000);
-		}
+		dispatch(fullPopapPizzaData({name:item.title, key:item.key, urlImg:item.imgUrl, description:item.ingredients, price:item.price, isHit:item.isHit, isNew:item.isNew}));
+		if(mobileVersion) dispatch(toggleElement('handlePopapMobileEditPizza'));
+		else dispatch(toggleElement('handlePopapPizza'));
+	}
+	const pushFood = (id)=>{
+		let item = food[id]; 
+		dispatch(pushListShopping({urlImg:item.imgUrl, key:item.key , name:item.title, size:null, weidth:null, price:item.price, type:null}));
+		dispatch(showMessage());
+		setTimeout(()=>{
+			dispatch(hideMessage())
+		}, 1000);
 	}
 
 	const pizzaFilters = useSelector((state) => state.app.pizzaFilters);
@@ -79,13 +77,23 @@ export default function Food({food, name}){
 						
 						{pizzaList.map((value, index) => (
 							<li key={value.key} className={s.list__food_item}>
-								<div onClick={()=>editPizza(value.id-1)} className={s.list__food_imgblock}>
+								<div onClick={
+									name == 'Пицца' ?
+											(event)=>editPizza(value.id-1, event)
+										:  
+											()=>pushFood(value.id-1)
+									} className={s.list__food_imgblock}>
 									<img className={s.item__food_img} alt={value.title} src={value.imgUrl} />
 								</div>
 								<div className={s.item__food_text}>
 									<h3 className={s.item__food_title}>{value.title}</h3>
 									<p className={s.item__food_info}>{value.ingredients}</p>
-									<button onClick={(event)=>editPizza(value.id-1, event)} className={s.item__food_btn_mobile}>
+									<button onClick={
+										name == 'Пицца' ?
+											(event)=>editPizza(value.id-1, event)
+										:  
+											()=>pushFood(value.id-1)
+										} className={s.item__food_btn_mobile}>
 										{name == 'Пицца' ?
 										<>от {value.price} ₽</>
 										:
@@ -93,13 +101,19 @@ export default function Food({food, name}){
 									</button>
 								</div>
 								<div className={s.item__food_bottom}>
-									<button onClick={(event)=>editPizza(value.id-1, event)} className={s.item__food_btn}>
+									<button onClick={
+										name == 'Пицца' ?
+											(event)=>editPizza(value.id-1, event)
+										:  
+											()=>pushFood(value.id-1)
+										} className={s.item__food_btn}>
 										{name == 'Пицца' ?
-										<>Выбрать</>
+											<>Выбрать</>
 										:
-										<>В корзину</>}
+											<>В корзину</>
+										}
 									</button>
-									<span className={s.item__food_price}>от {value.price} ₽</span>
+									<span className={s.item__food_price} >от {value.price} ₽</span>
 								</div>
 							</li>	
 						))}

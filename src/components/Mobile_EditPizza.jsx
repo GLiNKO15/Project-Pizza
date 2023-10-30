@@ -1,6 +1,5 @@
 
 import React, {useRef, useState, useEffect} from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
 import s from '../styles/mobile.module.css';
 
 import cheeseIco from '../img/ico/ingredients/cheese.svg';

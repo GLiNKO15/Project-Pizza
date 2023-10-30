@@ -3,8 +3,8 @@ import { Link} from 'react-router-dom';
 
 import s from '../styles/mobile.module.css';
 
-import { useSelector, useDispatch } from 'react-redux'
-import {toggleElement, setRouteState, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import {toggleElement, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
 
 
 import icoPlus from '../img/ico/Plus.svg';
@@ -73,7 +73,6 @@ export default function MobileShoppingBagPopap({popapMobileShopRef}) {
 							to={'/confirm'} 
 							onClick={()=>{
 								dispatch(toggleElement('handlePopapMobileShopping'));
-								dispatch(setRouteState('confirm'));
 								window.scrollTo(0, 0);
 							}}
 							className={s.popap__shopping_checkout}

@@ -7,7 +7,7 @@ import store from './store/store.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/Project-Pizza'>
     <Provider store={store}>
       <App />
     </Provider>

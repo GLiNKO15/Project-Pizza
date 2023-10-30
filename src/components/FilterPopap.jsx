@@ -1,5 +1,4 @@
 import React, {useRef, useState, useEffect} from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
 
 import s from '../styles/index.module.css';
 // import '../styles/index.module.css';

@@ -19,14 +19,14 @@
 
 .shop-enter {
 	right: -440px;
-	transition: .1s;
+	transition: .2s;
 }
 .shop-enter-active {
-	transition: .1s;
+	transition: .2s;
 	right: 0px;
 }
 .shop-enter-done {
-	transition: .1s;
+	transition: .2s;
 	right: 0px;
 }
 .shop-exit {

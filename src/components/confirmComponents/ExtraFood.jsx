@@ -29,7 +29,8 @@ export default function ExtraFood({food, name}) {
 			size:null,
 			weidth:null,
 			price:item.price,
-			type:null}))
+			type:null
+		}))
 	}
 
 	const sliderRef = useRef(null);

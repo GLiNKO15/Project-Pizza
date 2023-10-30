@@ -1,6 +1,5 @@
 
 import React, {useRef, useState, useEffect} from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
 import s from '../styles/index.module.css';
 
 import cheeseIco from '../img/ico/ingredients/cheese.svg';
@@ -129,9 +128,8 @@ export default function EditFood({popapPizzaRef}){
 		}	
 	}
 	const addPizza = () =>{
-		console.log(finalPizzaSize);
-		console.log(finalPizzaWeidth);
-		dispatch(pushListShopping({urlImg:pizzaData.urlImg, name:pizzaData.name, size:finalPizzaSize.current, weidth:finalPizzaWeidth.current, price:pizzaData.price, type:'pizza'}));
+		console.log(pizzaData);
+		dispatch(pushListShopping({urlImg:pizzaData.urlImg, key:pizzaData.key, name:pizzaData.name, size:finalPizzaSize.current, weidth:finalPizzaWeidth.current, price:pizzaData.price, type:'pizza'}));
 		dispatch(showMessage());
 		setTimeout(()=>{
 			dispatch(hideMessage())
@@ -165,7 +163,6 @@ export default function EditFood({popapPizzaRef}){
 						<div className={s.popap__edit_top}>
 							<div className={s.popap__edit_name}>
 								<h2 className={s.popap__edit_title}>{pizzaData.name}</h2>
-								{/* {pizzaData.isNew ? } */}
 								{
 									pizzaData.isHit && (<img src={fire} />)
 								}

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 import ExtraFood from '../components/confirmComponents/ExtraFood';
 import DatePick from '../components/confirmComponents/DatePicker';
@@ -25,6 +25,7 @@ export default function Confirm() {
 	const food = useSelector((state) => state.app.responseFood);
 	const dispatch = useDispatch();
 	
+	let navigate = useNavigate();
 	let [deliveryHadle, setDeliveryHadle] = useState(false);
 	
 	const delivery = useSelector((state) => state.app.delivery);
@@ -57,8 +58,13 @@ export default function Confirm() {
 		}
 	},
 	mode:'onBlur'});
-
+	
+	let goFinalPage = () =>{
+		window.scrollTo(0, 0);
+		navigate('/final');
+	} 
 	const onSubmit = (data) =>{
+		goFinalPage();
 		console.log(data);
 	} 
 
@@ -70,7 +76,7 @@ export default function Confirm() {
 	useEffect(()=>{
 		dispatch(defaultDeliveryDay());
 	},[])
-
+	
 	const restaurantsOptions = [
 		{
 			label:'Москва, ул. Юных Ленинцев, д.99',
@@ -85,7 +91,6 @@ export default function Confirm() {
 			value:'Львов, ул. Шевченко, д.44'
 		},
 	];
-	console.log(listShopping);
 
 	return (
 		<div className={s.confirm}>
@@ -124,7 +129,7 @@ export default function Confirm() {
 					:
 						<div className={s.order__error}>
 							Корзина пуста
-							<div className={s.order__subtitle}>Выберите продукты по <Link to={'/main'}>ссылке</Link></div>
+						
 						</div>
 					}
 				</ul>
@@ -434,15 +439,15 @@ export default function Confirm() {
 				</div>
 				<div className={s.final_result}>
 					<div className={s.final_price}>Итого: {finalPrice} ₽</div>
-					<input onClick={()=>{
-						if(delivery == 'Доставка'){
-							setValue("deliveryDay", deliveryDay)
-						}else{
-							setValue("deliveryDay", null);
-							setValue("deliveryExactTime", null);
-
-						}}}
-					type="submit" value='Оформить заказ' className={s.final_checkout}/>
+						<input onClick={()=>{
+							if(delivery == 'Доставка'){
+								setValue("deliveryDay", deliveryDay)
+							}else{
+								setValue("deliveryDay", null);
+								setValue("deliveryExactTime", null);
+							}}}
+							type="submit" value='Оформить заказ' className={s.final_checkout}
+						/>
 				</div>
 			</form>
 		</div>

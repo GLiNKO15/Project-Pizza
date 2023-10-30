@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link, Outlet} from 'react-router-dom';
+import { useNavigate, useLocation, Outlet} from 'react-router-dom';
 import Logo from '../img/ico/LOGO.svg';
 import Bag from '../img/ico/ShoppingBag.svg';
 
@@ -25,12 +25,11 @@ import { CSSTransition } from 'react-transition-group';
 import { useSelector, useDispatch } from 'react-redux'
 import 
 { 
-toggleElement,
-showMessage,
-hideMessage,
-setResponseFood,
-setFinalPrice,
-setRouteState
+	toggleElement,
+	showMessage,
+	hideMessage,
+	setResponseFood,
+	setFinalPrice,
 } from '../store/AppSlice';
 
 import PopapEditFood from '../components/EditFood';
@@ -48,6 +47,8 @@ import ArrowLeftOrange from '../img/ico/ArrowLeftOrange.svg';
 
 export default function Page() {
 	const dispatch = useDispatch();
+	let navigate = useNavigate();
+	let location = useLocation();
 	const wrapper = useRef(null);
 	const header = useRef(null);
 	const popapPizza = useSelector((state) => state.app.handlePopapPizza);
@@ -150,26 +151,25 @@ export default function Page() {
 	const popapMobileFilterRef = useRef(null);
 	const popapMobileShoppingRef = useRef(null);
 
+	let navigateGoBack = () => {
+		window.scrollTo(0, 0);
+		navigate(-1);
+	}
+
 	return (
 		<div ref={wrapper} className={s.wrapper}>
 			<header ref={header} className={s.header}>
 				<div className={s.container__header}>
 					<div className={s.logo}>
-						{routeState != 'main' &&
-							<Link to={'/main'} 
-							onClick={
-								()=>{
-									dispatch(setRouteState('main'));
-									window.scrollTo(0 , 0)
-								}
-							}>
+						{location.pathname != '/' &&
+							<button onClick={navigateGoBack}>
 								<img src={ArrowLeftOrange}/>
-							</Link>
+							</button>
 						}
 						<img className={s.logo__img} src={Logo} alt="LOGO" />
-						<span className={routeState == 'main' ? s.logo__text : s.logo__text_confirm}>Pizza</span>
+						<span className={location.pathname == '/' ? s.logo__text : s.logo__text_confirm}>Pizza</span>
 					</div>
-					{routeState == 'main' &&
+					{location.pathname == '/' &&
 						<>
 							<nav ref={navigation} className={s.logo__navigation}>
 								<a href='#Акции'>Акции</a>

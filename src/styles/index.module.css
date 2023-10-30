@@ -1558,3 +1558,52 @@ body::-webkit-scrollbar-thumb{
 		line-height: 20px;
 	}
 }
+
+.final{
+	text-align:center;
+	margin: 0 auto;
+	margin-top:202px;
+}
+.final__img{
+	max-width: 220px;
+	margin: 0 auto;
+}
+.final__img img{
+	width: 100%;
+}
+.final__title{
+	font-family: Inter;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+	letter-spacing: 0px;
+	text-align: center;
+	margin-top: 48px;
+}
+.final__subtitle{
+	font-family: SFProText;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 0px;
+	text-align: center;
+	margin-top: 16px;
+}
+
+@media (max-width:426px) {
+	.final__title{
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 32px;
+		
+	}
+	.final__subtitle{
+		font-family: SFProText;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: 0px;
+		text-align: center;
+		margin-top: 16px;
+	}
+}

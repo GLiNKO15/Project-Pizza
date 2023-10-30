@@ -43,8 +43,7 @@ export const AppSlice = createSlice({
     responseFood: null,
     delivery: "Доставка",
     deliveryTime: 'Скорее', 
-    deliveryDay: null, 
-    routeState:'main',
+    deliveryDay: null,
   },
   reducers: {
     toggleElement:(state, actions)=>{
@@ -58,11 +57,12 @@ export const AppSlice = createSlice({
         price:actions.payload.price,
         description:actions.payload.description,
         isHit:actions.payload.isHit,
-        isNew:actions.payload.isNew
+        isNew:actions.payload.isNew,
+        key:actions.payload.key, 
       }
     },
     pushListShopping:(state, actions) => {
-      
+      console.log(actions.payload); 
       let result = state.listShopping.find(item=> item.key == actions.payload.key);
       
       if(!result ){
@@ -140,10 +140,6 @@ export const AppSlice = createSlice({
       const date = new Date;
       
       state.deliveryDay = `${date.getUTCDate()}/${date.getUTCMonth()+1}`;
-    },
-    setRouteState:(state, actions)=>{
-      state.routeState = actions.payload;
-      console.log(state.routeState)
     }
     },
 })
@@ -157,6 +153,6 @@ export const {
   setPizzaFiltersActiveBtn, clearPizzaFiltersActiveBtn,
   toggleElement, sortPizzaFiltersBtn, setResponseFood,
   setDelivery, setDeliveryDay,
-  defaultDeliveryDay, setRouteState} = AppSlice.actions;
+  defaultDeliveryDay} = AppSlice.actions;
 
 export default AppSlice.reducer

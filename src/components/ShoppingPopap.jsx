@@ -1,10 +1,10 @@
 import React, {useRef, useState, useEffect} from 'react';
-import { Link, Outlet, useLocation, Route, Routes } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 // import {  } from './counterSlice'
 import s from '../styles/index.module.css';
 // import '../styles/index.module.css';
 import { useSelector, useDispatch } from 'react-redux'
-import {toggleElement, setRouteState, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
+import {toggleElement, shopCounterMinus, shopCounterPlus} from '../store/AppSlice';
 
 import cross from '../img/ico/Cross.svg';
 import icoPlus from '../img/ico/Plus.svg';
@@ -75,7 +75,6 @@ export default function ShoppingBagPopap({popapShopRef}) {
 							to={'/confirm'} 
 							onClick={()=>{
 								dispatch(toggleElement('handlePopapShopping'));
-								dispatch(setRouteState('confirm'));
 								window.scrollTo(0 , 0)
 								console.log(window)
 							}}
