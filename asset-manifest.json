@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/Project-Pizza/static/css/main.5c0d7632.css",
-    "main.js": "/Project-Pizza/static/js/main.ad04d1bb.js",
+    "main.css": "/Project-Pizza/static/css/main.99678b86.css",
+    "main.js": "/Project-Pizza/static/js/main.d3f4b6ea.js",
     "static/media/SFProText-Semibold.woff": "/Project-Pizza/static/media/SFProText-Semibold.211bb31f62d4e685f728.woff",
     "static/media/SFProText-Regular.woff": "/Project-Pizza/static/media/SFProText-Regular.c488b3ed7c98b9c50749.woff",
     "static/media/SFProText-Semibold.woff2": "/Project-Pizza/static/media/SFProText-Semibold.78aaa0376995095f4ae2.woff2",
     "static/media/SFProText-Regular.woff2": "/Project-Pizza/static/media/SFProText-Regular.a5e9585e4356fb3d8ba7.woff2",
     "static/media/promotion1.jpg": "/Project-Pizza/static/media/promotion1.1588cc98fe020b2fdd80.jpg",
     "static/media/promotion2.jpg": "/Project-Pizza/static/media/promotion2.70b7c5753686c6434e0f.jpg",
+    "static/media/delivery.png": "/Project-Pizza/static/media/delivery.244c7caa6167fd5e6eda.png",
     "static/media/Pizza.svg": "/Project-Pizza/static/media/Pizza.e2a7aa91cff5fbfebb1000991cfa3ca0.svg",
     "static/media/LOGO.svg": "/Project-Pizza/static/media/LOGO.cb06518345f8aac5b966c310bfa2884d.svg",
     "static/media/Combo.svg": "/Project-Pizza/static/media/Combo.9ad89c789d2b29ff39a9473813dbee1b.svg",
@@ -38,11 +39,11 @@
     "static/media/ArrowRight.svg": "/Project-Pizza/static/media/ArrowRight.475734f6424058721bc26db2cc5c666a.svg",
     "static/media/ArrowLeftOrange.svg": "/Project-Pizza/static/media/ArrowLeftOrange.583c0b606fe79c91f77fd1f9e173b7d3.svg",
     "static/media/Minus.svg": "/Project-Pizza/static/media/Minus.5063400564260acb35871e9b19c738d6.svg",
-    "main.5c0d7632.css.map": "/Project-Pizza/static/css/main.5c0d7632.css.map",
-    "main.ad04d1bb.js.map": "/Project-Pizza/static/js/main.ad04d1bb.js.map"
+    "main.99678b86.css.map": "/Project-Pizza/static/css/main.99678b86.css.map",
+    "main.d3f4b6ea.js.map": "/Project-Pizza/static/js/main.d3f4b6ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c0d7632.css",
-    "static/js/main.ad04d1bb.js"
+    "static/css/main.99678b86.css",
+    "static/js/main.d3f4b6ea.js"
   ]
 }
